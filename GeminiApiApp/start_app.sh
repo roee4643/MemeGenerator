@@ -1,7 +1,4 @@
 #!/bin/bash
 
-# start_app.sh
-
-
-# Then start the main application
+# Start the main application
 python GeminiApiFlask.py
