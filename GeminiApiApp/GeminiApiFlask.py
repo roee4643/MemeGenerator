@@ -7,13 +7,13 @@ gemini_api = GetApi()  # Instantiate my GetApi class
 
 
 @app.route('/get_meme', methods=['GET'])
-def get_api_response():
+def get_api_response() -> tuple:
 
     response = gemini_api.get_meme()
     if response:
         print(f"{response}")
-        return Response(response, mimetype='text/plain'), 200 #Response:Used to send raw text with line breaks directly instead of JSON.
-        #mimetype='text/plain': Specifies that the response is plain text, not JSON.
+        return Response(response, mimetype='text/plain'), 200 # Response: used to send raw text with line breaks directly instead of JSON.
+        # mimetype='text/plain': Specifies that the response is plain text, not JSON.
     else:
         return jsonify({"error": "Failed to retrieve data"}), 500
 
