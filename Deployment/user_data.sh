@@ -15,7 +15,7 @@ sudo python3 -m ensurepip --upgrade
 sudo python3 -m pip install --upgrade pip
 
 # Install and run docker
-cd home/ec2-user/App
+cd App
 
 sudo yum install docker -y
 sudo service docker start
