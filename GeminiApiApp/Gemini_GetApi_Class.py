@@ -16,7 +16,6 @@ class GetApi:
         self.model = genai.GenerativeModel("gemini-pro")
 
     def get_meme(self):
-
         # Send a request to the model
         flag = 1
         while flag == 1:
@@ -27,11 +26,9 @@ class GetApi:
             print(sentiment) #print -1 to 1 score of sentiment
             if sentiment >= 0:  
                 flag = 0      
-                return cleaned_text
-               
+        return cleaned_text
     
     #removing non relevant charecters form the text
     def clean_text(self,response):
         text = re.sub(r'[^a-zA-Z0-9\s\n]', '', response)
         return text
-
