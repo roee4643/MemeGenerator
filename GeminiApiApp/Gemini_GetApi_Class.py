@@ -12,7 +12,9 @@ class GetApi:
         if not api_key:
             raise ValueError("GEMINI_API_KEY environment variable not set.")
             # Create a model instance
+        genai.configure(api_key)
         self.model = genai.GenerativeModel("gemini-pro")
+        
 
     def get_meme(self):
 
