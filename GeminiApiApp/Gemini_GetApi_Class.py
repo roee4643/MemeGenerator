@@ -2,7 +2,6 @@
 import google.generativeai as genai
 from textblob import TextBlob
 import re
-from PIL import Image, ImageDraw, ImageFont
 import os
 
 class GetApi:
